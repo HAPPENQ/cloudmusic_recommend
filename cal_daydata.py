@@ -8,7 +8,7 @@ import pymongo as pm
 import datetime
 import sys
 reload(sys)
-sys.setdefaultencoding( "utf-8" )
+sys.setdefaultencoding("utf-8")
 
 client =pm.MongoClient('192.168.1.109',27017)
 db=client.cloudmusic
@@ -33,7 +33,6 @@ def cal_emotion(songs):
             #print r['type']
             if len(r['type'])<=0:
                 continue
-
             if r['type'][0]=='HAPPY':
                 happy+=1
             elif r['type'][0]=='SAD':
